@@ -1,1 +1,134 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+a{
+    background-color:black;
+    border: .5px solid #333;
+    border-radius: 12px;
+    color: white;
+    font-family: : bodoni;
+    font-size: 30px;
+    padding: 0.20rem 0.5rem;
+    text-decoration: none;
+
+}
+body{
+    background-color:#759EC6;
+}
+footer{
+    color:black;
+    padding:10px 10px;
+}
+h1{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+h2{
+    color: black;
+    font-family: :"bodoni";
+    padding: 0px 1px;
+}
+main > article {
+
+}
+ul{
+    text-align: right;
+}
+.container {
+    margin: 0 auto;
+    max-width: 50rem;
+    width: 90%;
+}
+.hero-image{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image:url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUNrB0yvQuwNJFirHeQBezobf0ZFEtUc726JNyMgfMMLKqbMdzYA);
+    background-position: 50% 60%;
+    background-size: cover;
+    height: 30vh;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+.main-header {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+.main-header_title{
+    color: black;
+    font-family: :"bodoni";
+    font-size: 70px;
+}
+@media (min-width: 730px) {
+    .main-header {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}    
+.nav_list{
+
+    display: flex;
+    list-style-type: none;
+
+}
+.nav_list-item {
+
+    margin-right: 2rem;
+}
+.nav_project-list_item{
+    display: flex;
+    list-style-type: none;
+}
+.nav_contact-list{
+    display:flex;
+    list-style-type: none;
+}
+.nav_contact-email{
+
+    margin-right: 2rem;
+}
+.nav_contact-phone{
+
+    margin-right: 2rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
