@@ -86,10 +86,9 @@ ul{
     margin: 0;
     padding: 0;
 }
-
 .hero_image {
     align-items: center;
-    background-image: url (https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFFrWLs-bof7tCZjNLKXrjjatLehmysVyMlHLgXiA0dipcZAstbw);
+    background-image: url ("images/sunset.jpg");
     background-position: 50% 60%;
     background-size: cover;
     display: flex;
