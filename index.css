@@ -3,28 +3,35 @@
     margin: 0;
     padding: 0;
 }
-a{
-    background-color:black;
-    border: .5px solid #333;
-    border-radius: 12px;
-    color: white;
-    font-family: : bodoni;
-    font-size: 30px;
-    padding: 0.20rem 0.5rem;
-    text-decoration: none;
 
+article{
+    flex: 1;
 }
+
+aside{
+    width: 50vh;
+}
+
+
 body{
     background-color:#759EC6;
+    display: flex;
+    flex-direction: column; 
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;  
 }
 footer{
     color:black;
-    padding:10px 10px;
+    padding:5px 5px;
+    width: 200px;
 }
 h1{
     display: flex;
     text-align: center;
     justify-content: center;
+    margin: 0;
+    padding: 0;
 }
 
 h2{
@@ -32,74 +39,73 @@ h2{
     font-family: :"bodoni";
     padding: 0px 1px;
 }
-main > article {
+header{
+    align-items:center;
+    display: flex;
+    margin: 2rem;
+}
+main{
+    display: flex;
+    flex:1; 
+}
+#name,
+nav{
+    flex: 1;
+    order: -1;
+    width: 5vh;
+}
+nav li{
+    border-style: solid;
+    border-color: black;
+    list-style: none;
+}
+.nav__list{
 
 }
-ul{
-    text-align: right;
+.nav__list-item{
+    border-style: solid;
+    border-color: black;
+    list-style: none;
+    margin: 5px;
+    padding:5px;
+
 }
-.container {
-    margin: 0 auto;
-    max-width: 50rem;
-    width: 90%;
-}
-.hero-image{
+nav ul {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-image:url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUNrB0yvQuwNJFirHeQBezobf0ZFEtUc726JNyMgfMMLKqbMdzYA);
-    background-position: 50% 60%;
-    background-size: cover;
-    height: 30vh;
-    justify-content: center;
-    margin-bottom: 2rem;
+    justify-content: space-around;
 }
-.main-header {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    top: 0;
-    width: 100%;
-}
-.main-header_title{
-    color: black;
-    font-family: :"bodoni";
-    font-size: 70px;
-}
+
 @media (min-width: 730px) {
-    .main-header {
+    header {
         flex-direction: row;
         justify-content: space-between;
     }
-}    
-.nav_list{
 
+ul{
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+.hero_image {
+    align-items: center;
+    background-image: url (https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFFrWLs-bof7tCZjNLKXrjjatLehmysVyMlHLgXiA0dipcZAstbw);
+    background-position: 50% 60%;
+    background-size: cover;
     display: flex;
-    list-style-type: none;
+    flex-direction: column;
+    height: 70vh;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+.contact-list_item{
+    border-style: solid;
+    border-color: black;
+    list-style: none;
+    margin: 5px;
+    padding:5px;
 
 }
-.nav_list-item {
-
-    margin-right: 2rem;
-}
-.nav_project-list_item{
-    display: flex;
-    list-style-type: none;
-}
-.nav_contact-list{
-    display:flex;
-    list-style-type: none;
-}
-.nav_contact-email{
-
-    margin-right: 2rem;
-}
-.nav_contact-phone{
-
-    margin-right: 2rem;
-}
-
 
 
 
