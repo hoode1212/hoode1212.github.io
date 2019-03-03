@@ -1,4 +1,7 @@
-*{margin: 0; padding:0;}
+*{
+    margin: 0;
+    padding:0;
+}
 .banner{
     background: url(/images/sunset.jpg);
     width: 100%;
@@ -86,8 +89,7 @@ main-content{
     -webkit-flex-flow: row wrap;
     -ms-flex-flow: row wrap;
     flex-flow: row wrap;
-    padding: 5% 0;
-    
+    padding: 5% 0;    
 }
 .main1{
     -webkit-box-flex: 1;
@@ -123,7 +125,6 @@ main-content{
     top: 0;
     left: 0;
     background : rgba(0,0,0,0.5);
-
 }
 .contact-items h2{
     color: #fff;
@@ -151,9 +152,7 @@ main-content{
     padding: 15px 80px;
     text-decoration: none;
     text-transform: uppercase;
-
 }
-
 @media all and (max-width:500px){
     .top-bar{
         -webkit-box-orient: vertical;
