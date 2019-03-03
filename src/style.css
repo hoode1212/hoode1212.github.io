@@ -117,7 +117,8 @@ main-content{
 .contact{
     background: url(/images/desk.jpg);
     padding: 80px 0;
-    position: relative;
+    position: bottom;
+    width: 100%;
     z-index: 1;
 }
 .contact:before{
