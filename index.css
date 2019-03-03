@@ -1,128 +1,235 @@
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+*{margin: 0; padding:0;}
+.banner{
+    background: url(/images/sunset.jpg);
+    width: 100%;
+    background-size: cover; 
 }
-
-article{
+.top-bar{
+    background-color: #000;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    height: auto;
+}
+.logo{
+    color:#fff;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
     flex: 1;
+    font-size: 40ox;
+    padding: 18px;
+    text-transform: uppercase; 
 }
-
-aside{
-    width: 50vh;
+.menu{
+    -webkit-flex: 3px;
+    -moz-flex: 3px;
+    -ms-flex: 3px;
+    -o-flex: 3px;
+    flex: 3px;
 }
-
-
-body{
-    background-color:#759EC6;
+.menu ul{
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column; 
-    font-family: sans-serif;
-    margin: 0;
-    padding: 0;  
+    list-style: none;
+    margin-top: 30px;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-flow: row wrap;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
 }
-footer{
-    color:black;
-    padding:5px 5px;
-    width: 200px;
-}
-h1{
-    display: flex;
+.menu ul li{
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
     text-align: center;
-    justify-content: center;
-    margin: 0;
-    padding: 0;
 }
-
-h2{
-    color: black;
-    font-family: :"bodoni";
-    padding: 0px 1px;
+.menu ul li a {
+    color: #fff;
+    font-size: 20px;
+    text-decoration: none;
 }
-header{
-    align-items:center;
+.banner-text{
+    display: -webkit-box;
+    display: -webkit-flex;
+    display:-ms-flexbox;
+    display:flex;
+    padding: 15% 0;
+}
+.banner-text-items{
+    color: #fff;
+    margin:auto;
+    text-align: center;
+    width: 50%;
+}
+.banner-text-items h2{
+    font-size: 3em;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+.banner-text-items p{
+    font-size: 18px;
+}
+main-content{
+    display:-webkit-box;
+    display:-webkit-flex;
+    display:-ms-flexbox;
     display: flex;
-    margin: 2rem;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-flow: row wrap;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
+    padding: 5% 0;
+    
 }
-main{
-    display: flex;
-    flex:1; 
-}
-#name,
-nav{
+.main1{
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
     flex: 1;
-    order: -1;
-    width: 5vh;
+    padding: 3%;
+    text-align: center;
 }
-nav li{
-    border-style: solid;
-    border-color: black;
-    list-style: none;
-}
-.nav__list{
-
-}
-.nav__list-item{
-    border-style: solid;
-    border-color: black;
-    list-style: none;
-    margin: 5px;
-    padding:5px;
-
-}
-nav ul {
+.contact-items{
+    display:-webkit-box;
+    display:-webkit-flex;
+    display:-ms-flexbox;
     display: flex;
-    justify-content: space-around;
+    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;   
+}
+.contact{
+    background: url(/images/cartoon/landscape.jpg);
+    padding: 80px 0;
+    position: relative;
+    z-index: 1;
+}
+.contact:before{
+    position: absolute;
+    content: '';
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background : rgba(0,0,0,0.5);
+
+}
+.contact-items h2{
+    color: #fff;
+    font-size: 40px;
+    margin-bottom: 18px;
+}
+.contact-items input[type="text"]{
+    border-radius:  10ox;
+    margin-bottom:  15px;
+    padding: 15px;
+    width: 50%;
+}
+.contact-items textarea{
+    border-radius: 10px;
+    height: 150px;
+    padding: 15px;
+    width: 50%;
+}
+.contact-items a{
+    background: #da4b29;
+    color: #fff;
+    display: block;
+    font-size: 20px;
+    margin-top: 25px;
+    padding: 15px 80px;
+    text-decoration: none;
+    text-transform: uppercase;
+
 }
 
-@media (min-width: 730px) {
-    header {
-        flex-direction: row;
-        justify-content: space-between;
+@media all and (max-width:500px){
+    .top-bar{
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        text-align: center;
+    }
+    .logo{
+        padding: 18px 0 0;
+    }
+    menu ul {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        margin-top: 0;
+    }
+    .menu ul li{
+        padding: 5px;   
+    }
+    .banner-text-items{
+        width: 100%;
+    }
+    .banner-text-items h2{
+        font-size: 1.5em;
+    }
+    .main-content{
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
     }
 
-ul{
-    color: white;
-    margin: 0;
-    padding: 0;
 }
-.hero_image {
-    align-items: center;
-    background-image: url ("images/sunset.jpg");
-    background-position: 50% 60%;
-    background-size: cover;
-    display: flex;
-    flex-direction: column;
-    height: 70vh;
-    justify-content: center;
-    margin-bottom: 2rem;
-}
-.contact-list_item{
-    border-style: solid;
-    border-color: black;
-    list-style: none;
-    margin: 5px;
-    padding:5px;
+@media all and (max-width:800px){
+    .top-bar{
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        text-align: center;
+    }
+    .logo{
+        padding: 18px 0 0;
+    }
+    menu ul {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        margin-top: 0;
+    }
+    .menu ul li{
+        padding: 5px;   
+    }
+    .banner-text-items{
+        width: 100%;
+    }
+    .banner-text-items h2{
+        font-size: 1.5em;
+    }
+    .main-content{
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
