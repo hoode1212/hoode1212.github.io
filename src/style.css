@@ -4,11 +4,17 @@
     margin: 0;
     padding:0;
 }
- a{
-     display: flex;
+
+a{
+    display: flex;
     justify-content: space-between; 
     text-decoration: none;
-} 
+}
+
+.active, .dot:hover {
+    background-color: #717171;
+}
+
 body{
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -16,15 +22,18 @@ body{
 #b1{
     display: none;
 }
+
 .b1{
     background:#7186A6;
 }
+
 .closebtn {
     float: right;
     color: white;
     font-size: 35px;
     cursor: pointer;
-  }
+}
+
 .column {
     float: left;
     width: 33.33%;
@@ -33,52 +42,70 @@ body{
     font-size: 25px;
     cursor: pointer;
     color: white;
-  }
+}
   
   .containerTab {
     padding: 20px;
     color: white;
-  }
+}
   
 .column-layout{
     display: flex;
     position: relative;
     justify-content: space-evenly;
 }
-/* .container{
-    background-color: #6699CC;
-    border-bottom:1px;
-    border-color: black;
-    border-top: 1px;
-    display:flex;
-    justify-content: space-evenly;
-    list-style: none;
-    margin: 0;
-    max-width: 100%;
-    width: 100%;
-    text-decoration: none;
-
-} */
-
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+  
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
 .footer-container-item{
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     padding:1em;
     margin:1em;
-    list-style: none;
+    list-style: none;    
+}
+.footer-item{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
 
-    
+.footer-info{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
 }
 h2{
     padding: 2px;
     color:black;
     text-decoration: none;
 }
-.footer-info{
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
+.header a{
+    float: left;
+    color: black;
+    text-align: center;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 18px; 
+    line-height: 25px;
+    border-radius: 4px;
+    list-style: none;
+
 }
 .header-name{ 
     padding: 5px;
@@ -90,38 +117,34 @@ h2{
     -webkit-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
-  }
-  .icon-bar a {
+}
+.icon-bar a {
     display: block;
     text-align: center;
     padding: 16px;
     transition: all 0.3s ease;
     color: white;
     font-size: 20px;
-  }
-  .icon-bar a:hover {
+}
+.icon-bar a:hover {
     background-color: #000;
-  }
-  
-  .meetup {
-    background: #55ACEE;
-    color: white;
-  }
-  
-  .google {
-    background: #dd4b39;
-    color: white;
-  }
-  
-  .linkedin {
-    background: #007bb5;
-    color: white;
-  }
-  
-  .github {
-    background: #bb0000;
-    color: white;
-  }
+}
+@keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+}
+.list-item a{
+    background-color: grey;
+    border-radius: 5px;
+    color: black;
+    display: flex;
+    font-size: 20px;
+    justify-content: space-between;
+    list-style: none;
+    margin-right: 1px;
+    padding:.1em 1em;
+    text-decoration: none;
+}
 .main-image{
     align-items: center;
     background: url(/images/grey-background.jpg);
@@ -139,6 +162,13 @@ h2{
     justify-content: space-between;
     text-decoration: none;
 }
+.menu-list{
+    list-style: none;
+    text-decoration: none;
+}
+.mySlides {
+    display: none;
+} 
 .nav-menu ul{
     display: flex;
     flex-flow: row wrap;
@@ -148,18 +178,40 @@ h2{
     justify-content: space-between;
    
 }
-.list-item a{
-    background-color: grey;
-    border-radius: 5px;
-    color: black;
-    display: flex;
-    font-size: 20px;
-    justify-content: space-between;
-    margin-right: 1px;
-    padding:.1em 1em;
-}
-.nav-menu{
+.nav-menu-right{
     text-decoration: none;
+    list-style: none;
+    align-items: right;
+
+}
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+  
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
 }
 .project-links{
     color:black;
@@ -173,116 +225,16 @@ h2{
     clear: both;
   }
   
-.screenshots{
-    
-
-}
 .show-carousel{
     background-color: grey;
-}
-.top-header{
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    top: 0;
-    width: 100%;
-}
-ul{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-}
-@media all and (max-width:500px){
-    .column-layout{
-        grid-column-gap: 1rem;
-        grid-template-columns: repeat(3, 1fr);
-    }
-header{
-        
-        flex-direction: column;
-        text-align: center;
-    }
-    .logo{
-        padding: 18px 0 0;
-    }
-    .menu ul {
-        flex-direction: column;
-        margin-top: 0;
-    }
-    .menu ul li{
-        padding: 5px;   
-    }
-    .banner-text-items{
-        width: 100%;
-    }
-    .banner-text-items h2{
-        font-size: 1.5em;
-    }
-    main{
-        flex-direction: column;
-    }
-}
-@media all and (max-width:800px){
-header{
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .menu ul {
-        flex-direction: column;
-        margin-top: 0;
-    }
-    .menu ul li{
-        padding: 5px;   
-    }
-    
-    .main-content{
-        flex-direction: column;
-        
-    }
 }
 .slideshow-container {
     max-height: auto;
     max-width: 100%;
     position: relative;
     margin: auto;
-  }
-  
-  /* Hide the images by default */
-  .mySlides {
-    display: none;
-  }
-  
-  /* Next & previous buttons */
-  .prev, .next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    width: auto;
-    margin-top: -22px;
-    padding: 16px;
-    color: white;
-    font-weight: bold;
-    font-size: 18px;
-    transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
-  }
-  
-  /* Position the "next button" to the right */
-  .next {
-    right: 0;
-    border-radius: 3px 0 0 3px;
-  }
-  
-  /* On hover, add a black background color with a little bit see-through */
-  .prev:hover, .next:hover {
-    background-color: rgba(0,0,0,0.8);
-  }
-  
-  /* Caption text */
-  .text {
+}
+.text {
     color: #f2f2f2;
     font-size: 15px;
     padding: 8px 12px;
@@ -290,46 +242,83 @@ header{
     bottom: 8px;
     width: 100%;
     text-align: center;
-  }
-  
-  /* Number text (1/3 etc) */
-  .numbertext {
-    color: #f2f2f2;
-    font-size: 12px;
-    padding: 8px 12px;
+}
+.top-header{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 10px;
     position: absolute;
     top: 0;
-  }
+    width: 100%;
+}
+@-webkit-keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+}
 
-  .dot {
-    cursor: pointer;
-    height: 15px;
-    width: 15px;
-    margin: 0 2px;
-    background-color: #bbb;
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.6s ease;
-  }
+@media all and (max-width:500px){
+    .column-layout{
+    grid-column-gap: 1rem;
+    grid-template-columns: repeat(3, 1fr);
+    }
+header{ 
+    flex-direction: column;
+    text-align: center;
+    }
+    .logo{
+    padding: 18px 0 0;
+    }
+    .menu ul {
+    flex-direction: column;
+     margin-top: 0;
+    }
+    .menu ul li{
+    padding: 5px;   
+    }
+    .banner-text-items{
+    width: 100%;
+    }
+    .banner-text-items h2{
+    font-size: 1.5em;
+    }
+    main{
+    flex-direction: column;
+    }
+}
+@media all and (max-width:800px){
+header{
+    flex-direction: column;
+    text-align: center;
+    }
+
+    .menu ul {
+    flex-direction: column;
+    margin-top: 0;
+    }
+    .menu ul li{
+    padding: 5px;   
+    }
+    
+    .main-content{
+    flex-direction: column;    
+    }
+}
+
+
   
-  .active, .dot:hover {
-    background-color: #717171;
-  }
   
-  /* Fading animation */
-  .fade {
-    -webkit-animation-name: fade;
-    -webkit-animation-duration: 1.5s;
-    animation-name: fade;
-    animation-duration: 1.5s;
-  }
   
-  @-webkit-keyframes fade {
-    from {opacity: .4} 
-    to {opacity: 1}
-  }
+
+
+
+
+
+
+
   
-  @keyframes fade {
-    from {opacity: .4} 
-    to {opacity: 1}
-  }
+
+
+  
+
+
