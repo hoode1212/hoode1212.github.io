@@ -1,3 +1,25 @@
+//Menu Button 
+function toggleHide(element) {
+  element.classList.toggle('hide');
+}
+
+function bindNavButtonToMenuList() {
+  const navButton = document.querySelector('.nav-button');
+  
+  navButton.addEventListener('click', function() {
+    const menuList = document.querySelector('.menu-list');
+    toggleHide(menuList);
+  });
+}
+
+function run() {
+  bindNavButtonToMenuList();
+}
+
+run();
+
+
+//Image Carousel
 
 function openTab(tabName) {
     var i, x;
@@ -15,7 +37,6 @@ function plusSlides(n) {
   showSlides(slideIndex += n);
 }
 
-// Thumbnail image controls
 function currentSlide(n) {
   showSlides(slideIndex = n);
 }
@@ -35,3 +56,26 @@ function showSlides(n) {
   slides[slideIndex-1].style.display = "block"; 
   dots[slideIndex-1].className += " active";
 }
+
+
+// Modal
+var modal = document.getElementById('myModal');
+
+var btn = document.getElementById("myBtn");
+
+var span = document.getElementsByClassName("close")[0];
+ 
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+

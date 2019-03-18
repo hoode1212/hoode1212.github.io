@@ -1,0 +1,23 @@
+{
+  "name": "hoode1212.github.io",
+  "version": "1.0.0",
+  "description": "My Bio Page",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hoode1212/hoode1212.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hoode1212/hoode1212.github.io/issues"
+  },
+  "homepage": "https://github.com/hoode1212/hoode1212.github.io#readme",
+  "devDependencies": {
+    "jest": "^24.5.0"
+  }
+}
